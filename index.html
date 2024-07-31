@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+
+<head>
+    <title>isame mario</title>
+    <style>
+        body{
+            background-color: #022a3f;
+            padding-top:0;
+        }
+
+        .container:hover{
+            animation: container-alteration 0.5s ease-in forwards;
+        }
+
+        @keyframes container-alteration{
+            100%{
+                background-color: rgb(19, 58, 104);
+                border-color:rgb(34, 110, 197);
+            }
+        }
+
+        .container:hover .container_additional{
+            animation: ca-alteration 0.5s ease-in-out forwards;
+        }
+
+        @keyframes ca-alteration{
+            100%{
+                color:red;
+            }
+        }
+
+        .heading{
+            position: relative;
+            left: 5%;
+            width: 80%;
+            height: auto;
+            margin-top:0;
+            padding-top:0;
+            text-align: left;
+            font-weight: bold;
+        }
+
+        .introduction{
+            position: relative;
+            left: 5%;
+            right: 10%;
+            width: 85%;
+            height: auto;
+            margin-top: 20px;
+            padding-top: 0;
+            text-align: left;
+        }
+
+        .container{
+            position: relative;
+            left: 5%;
+            right: 10%;
+            width: 85%;
+            height: auto;
+            margin-top: 10px;
+            padding: 20px;
+            text-align:left;
+
+            background-color: rgb(34, 110, 197);
+            border-style: solid;
+            border-radius: 30px;
+            border-color: white;
+            border-width: 5px;
+        }
+
+        .container_header{
+            font-size: 50px;
+            font-weight: bold;
+            color:white;
+        }
+
+        .container_additional{
+            font-size: 30px;
+            color: #25f1e7;
+            margin-bottom: 10px;
+            margin-top: 10px;
+        }
+
+        .body_font_color{
+            color: white;
+        }
+
+        .body_font_size{
+            font-size: 20px;
+        }
+
+        li{
+            font-size: 20px;
+            color: white;
+            font-family: "Eras ITC", "Eras Light ITC",  sans-serif ;
+        }
+
+        .center_align_text{
+            text-align:center;
+        }
+
+        .header_text{
+            position: relative;
+            left: 10px;
+            font-size: 5rem;
+            color: aliceblue;
+        }
+
+        p{
+            margin: 0;
+            padding: top 0, left 0, right 0, bottom 0;
+            font-family: "Eras ITC", "Eras Light ITC",  sans-serif ;
+        }
+
+        #mantag{
+            position: relative;
+            left: 10px;
+            font-size: 5rem;
+            color: rgb(1, 132, 176);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="heading">
+        <p class="header_text">Jaques Janse van Rensburg</p>
+        <p id="mantag">IT Manager</p>
+    </div>
+
+    <div class="introduction container">
+        <p class="body_font_size body_font_color">Dynamic IT Manager with 6+ years at Hydra-Arc, BSc in IT & Computer Science ’24. Expert in solutions Architecture, C#/C++, Leadership, Project Management & Linux Administration. Avid on leveraging my skills in SQL, Virtualization, Firewall/VPN’S & MySQL to drive innovation. Eager to contribute to you team’s success through robust system integration, strategic decision making and effective problem solving.</p>
+    </div>
+
+    <div class="container">
+        <p class="container_header">Work Experience</p>
+        <p class="container_additional">IT Manager, Hydra-Arc, Secunda - July 2022 onwards</p>
+        <ul>
+            <li>Achieved a 98% customer satisfaction rate through the provision of round-the-clock IT support services</li>
+            <li>Implemented a robust private cloud infrastructure utilizing ESXi VMWare, enhancing system reliability</li>
+            <li>Fortified network security by integrating cutting-edge technologies to safeguard against cyber threats</li>
+            <li>Expertly installed and maintained local, wireless, and WAN networks to ensure optimal connectivity</li>
+            <li>Provided comprehensive managed IT services, including meticulous invoicing and cost-efficiency evaluations</li>
+        </ul>
+
+        <p class="container_additional">Reference:</p>
+        <ul>
+            <li>Name:   Sanet Nobrega</li>
+            <li>Cel:    +27 (0) 82 828 3436</li>
+            <li>Email:  sanet.nobrega@hydra-arc.com</li>
+        </ul>
+        <br>
+        <p class="container_additional">Software Engineer | DBD | DBA, Hydra-Arc, Secunda - June 2021 onwards</p>
+        <ul>
+            <li>Designed, developed and successfully deployed a simple yet effective application to facilitate the encryption and distribution of employee payslips</li>
+            <li>Developed a custom Transaction Processing and Management Information System with CRM capabilities to optimize business processes which incorporates biometric security to identify personnel, currently deployed at over 14 locations inside Sasol Secunda for Hydra-Arc where the TPS offers a best in class synchronization algorithm that ensures every endpoint can continue working even if communication is interrupted</li>
+        </ul>
+        <p class="container_additional">Reference:</p>
+        <ul>
+            <li>Name:   Lee Jordaan</li>
+            <li>Tel:    +27 (0) 17 620 4321</li>
+            <li>Email:  lee.jordaan@seritonex.com</li>
+        </ul>
+        <br>
+        <p class="container_additional">IT Technician, Hydra-Arc, Secunda - May 2018 till June 2022</p>
+        <ul>
+            <li>Facilitated the migration from web hosted emails to Microsoft Business 365 with Active Directory Domain Controller</li>
+            <li>Maintained endpoints with a high regard for customer satisfaction and turnaround time</li>
+            <li>Upgraded and maintained network infrastructure spanning across multiple sites encompassing LAN, PTP Wireless, PTMP Wireless, and Site-to-Site SSL Tunnels</li>
+        </ul>
+        <p class="container_additional">Reference:</p>
+        <ul>
+            <li>Name:   Gert Labuschagne</li>
+            <li>Cel:    +27 (0) 72 595 1708</li>
+            <li>Email:  support@hydra-arc.com</li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <p class="container_header">Education</p>
+        <p class="container_additional">BSc Information Technology & Computer Science, North-West University, Potchefstroom - 2024</p>
+        <ul>
+            <li>Object-Oriented Programming, Data Structures, and Algorithms.</li>
+            <li>Designed, developed, and deployed a custom asset management system to streamline operations</li>
+            <li>Implemented a robust private cloud infrastructure utilizing ESXi VMWare, enhancing system reliability</li>
+            <li>Fortified network security by integrating cutting-edge technologies to safeguard against cyber threats</li>
+            <li>Expertly installed and maintained local, wireless, and WAN networks to ensure optimal connectivity</li>
+            <li>Provided comprehensive managed IT services, including meticulous invoicing and cost-efficiency evaluations</li>
+        </ul>
+        <br>
+        <p class="container_additional">National Senior Certificate, Hoerskool Hoogenhout, Bethal - 2012</p>
+        <ul>
+            <li>Mathematics</li>
+            <li>Information Technology</li>
+            <li>Science and Chemistry</li>
+            <li>Geography</li>
+            <li>Afrikaans</li>
+            <li>English</li>
+            <li>Life Orientation</li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <p class="container_header">Personal Information</p>
+        <p class="container_additional">Skills</p>
+        <p class="body_font_size body_font_color">Solutions Architecture | C# (Programming Language) | C++ (Programming Language) | MySQL DBA & DBD | Leadership | Project Management | Network Configuration | Systems Integration | Software Development Life Cycle | Linux Administration | Virtualization Technologies | Firewalls and VPNs | Problem Solving</p>
+        <p class="container_additional">License</p>
+        <p class="body_font_size body_font_color">Code B Drivers License | MEWP Operator</p>
+        <p class="container_additional">Contact Information</p>
+        <p class="body_font_size body_font_color">Cel: +27 (0) 078 377 9690</p>
+        <p class="body_font_size body_font_color">Email: jaques.jvr94@gmail.com</p>
+        <p class="body_font_size body_font_color">Address: 22 Duiker Street, Secunda, 2302, South Africa</p>
+    </div>
+</body>
