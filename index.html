@@ -2,9 +2,14 @@
 
 <head>
     <title>isame mario</title>
+    <script>
+        function hydra_onclick(){
+
+        }
+    </script>
     <style>
         body{
-            background-color: #022a3f;
+            background-image: linear-gradient( #C2DEDC,#1b92aa) ;
             padding-top:0;
         }
 
@@ -14,8 +19,8 @@
 
         @keyframes container-alteration{
             100%{
-                background-color: rgb(19, 58, 104);
-                border-color:rgb(34, 110, 197);
+                background-color: #CDC2AE;
+                border-color:#116A7B;
             }
         }
 
@@ -25,8 +30,22 @@
 
         @keyframes ca-alteration{
             100%{
-                color:red;
+                color:black;
             }
+        }
+
+        .project_container{
+            height: 150px;
+            width: 30%;
+            background-size: 100% 100%;
+        }
+
+        .hydra-arc{
+            background-image: url("https://www.hydra-arc.com/ImageArchive/logos/Hydra-Arc_Group_of_Companies.png");
+        }
+
+        .seritonex{
+            background-image: url("https://seritonex.com/img/Icon/Seritonex_Color_Clear.png");
         }
 
         .heading{
@@ -51,6 +70,12 @@
             text-align: left;
         }
 
+        .project-tag{
+            font-size: 25px;
+            font-weight: bold;
+            margin-bottom: 50px;
+        }
+
         .container{
             position: relative;
             left: 5%;
@@ -61,28 +86,28 @@
             padding: 20px;
             text-align:left;
 
-            background-color: rgb(34, 110, 197);
+            background-color: #ECE5C7;
             border-style: solid;
             border-radius: 30px;
-            border-color: white;
+            border-color: black;
             border-width: 5px;
         }
 
         .container_header{
             font-size: 50px;
             font-weight: bold;
-            color:white;
+            color:black;
         }
 
         .container_additional{
             font-size: 30px;
-            color: #25f1e7;
+            color: #002e2c;
             margin-bottom: 10px;
             margin-top: 10px;
         }
 
         .body_font_color{
-            color: white;
+            color: black;
         }
 
         .body_font_size{
@@ -91,7 +116,7 @@
 
         li{
             font-size: 20px;
-            color: white;
+            color: black;
             font-family: "Eras ITC", "Eras Light ITC",  sans-serif ;
         }
 
@@ -103,7 +128,7 @@
             position: relative;
             left: 10px;
             font-size: 5rem;
-            color: aliceblue;
+            color: black;
         }
 
         p{
@@ -116,7 +141,7 @@
             position: relative;
             left: 10px;
             font-size: 5rem;
-            color: rgb(1, 132, 176);
+            color: rgb(1, 31, 43);
         }
     </style>
 </head>
@@ -129,6 +154,17 @@
 
     <div class="introduction container">
         <p class="body_font_size body_font_color">Dynamic IT Manager with 6+ years at Hydra-Arc, BSc in IT & Computer Science ’24. Expert in solutions Architecture, C#/C++, Leadership, Project Management & Linux Administration. Avid on leveraging my skills in SQL, Virtualization, Firewall/VPN’S & MySQL to drive innovation. Eager to contribute to you team’s success through robust system integration, strategic decision making and effective problem solving.</p>
+    </div>
+
+    <div class="container">
+        <p class="container_header">Projects</p>
+        <a href="https://jaques941102.github.io/StoreGuard" class="project-tag"><p>StoreGuard Information System<br>C# with Visual Studio<br>Confidential</p></a>
+        <br>
+        <a href="https://jaques941102.github.io/Accomodation" class="project-tag"><p>Ark-Lodge Accomodation<br>C# with Visual Studio<br>Confidential</p></a>
+        <br>
+        <a href="https://www.hydra-arc.com" class="project-tag"><p>Hydra-Arc Webpage<br>HTLM | CSS | JavaScript with Visual Studio Code<br>Public</p></a>
+        <br>
+        <a href="https://www.seritonex.com" class="project-tag"><p>Seritonex Webpage<br>HTLM | CSS | JavaScript with Visual Studio Code<br>Public</p></a>
     </div>
 
     <div class="container">
@@ -198,11 +234,27 @@
             <li>Life Orientation</li>
         </ul>
     </div>
+    <div class="container">
+        <p class="container_header">Skills</p>
+        <ul>
+            <li>Software Engineering</li>
+            <li>Solutions Architecture</li>
+            <li>C# (Programming Language)</li>
+            <li>C++ (Programming Language)</li>
+            <li>MySQL Database Administration & Database Development</li>
+            <li>Project Management</li>
+            <li>Leadership</li>
+            <li>Network Configuration</li>
+            <li>Systems Integration</li>
+            <li>Linux Administration</li>
+            <li>Virtualization Technologies</li>
+            <li>Firewalls Configuration and VPNs</li>
+            <li>Problem Solving</li>
+        </ul>
+    </div>
 
     <div class="container">
         <p class="container_header">Personal Information</p>
-        <p class="container_additional">Skills</p>
-        <p class="body_font_size body_font_color">Solutions Architecture | C# (Programming Language) | C++ (Programming Language) | MySQL DBA & DBD | Leadership | Project Management | Network Configuration | Systems Integration | Software Development Life Cycle | Linux Administration | Virtualization Technologies | Firewalls and VPNs | Problem Solving</p>
         <p class="container_additional">License</p>
         <p class="body_font_size body_font_color">Code B Drivers License | MEWP Operator</p>
         <p class="container_additional">Contact Information</p>
