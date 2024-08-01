@@ -9,11 +9,89 @@
     </script>
     <style>
         body {
-            background-color: #000000;
-            background-size: 100% 100%;
-            background-position: center;
-            background-repeat: no-repeat;
+            margin: auto;
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+            overflow: auto;
+            background: linear-gradient(315deg, rgba(101,0,94,1) 3%, rgba(60,132,206,1) 38%, rgba(48,238,226,1) 68%, rgba(255,25,25,1) 98%);
+            animation: gradient 15s ease infinite;
+            background-size: 400% 400%;
+            background-attachment: fixed;
         }
+
+        .card {
+            max-width: 1980px;
+            width: 90%;
+            margin: 50px auto;
+            border-radius: var(--border-radius);
+        }
+
+        .card .inner {
+            padding: 25px;
+            background: #222;
+            color: #fff;
+            border-radius: var(--border-radius);
+        }
+
+        @keyframes gradient {
+            0% {
+                background-position: 0% 0%;
+            }
+            50% {
+                background-position: 100% 100%;
+            }
+            100% {
+                background-position: 0% 0%;
+            }
+        }
+
+        .wave {
+            background: rgb(255 255 255 / 25%);
+            border-radius: 1000% 1000% 0 0;
+            position: fixed;
+            width: 200%;
+            height: 12em;
+            animation: wave 10s -3s linear infinite;
+            transform: translate3d(0, 0, 0);
+            opacity: 0.8;
+            bottom: 0;
+            left: 0;
+            z-index: -1;
+        }
+
+        .wave:nth-of-type(2) {
+            bottom: -1.25em;
+            animation: wave 18s linear reverse infinite;
+            opacity: 0.8;
+        }
+
+        .wave:nth-of-type(3) {
+            bottom: -2.5em;
+            animation: wave 20s -1s reverse infinite;
+            opacity: 0.9;
+        }
+
+        @keyframes wave {
+            2% {
+                transform: translateX(1);
+            }
+
+            25% {
+                transform: translateX(-25%);
+            }
+
+            50% {
+                transform: translateX(-50%);
+            }
+
+            75% {
+                transform: translateX(-25%);
+            }
+
+            100% {
+                transform: translateX(1);
+            }
+        }
+ 
 
         .container:hover{
             animation: container-alteration 0.5s ease-in forwards;
@@ -21,8 +99,7 @@
 
         @keyframes container-alteration{
             100%{
-                background-color: #FDB750;
-                border-color:#FC2E20;
+                background-color: white;
             }
         }
 
@@ -32,7 +109,7 @@
 
         @keyframes ca-alteration{
             100%{
-                color:black;
+                color:red;
             }
         }
 
@@ -81,37 +158,72 @@
 
         .container{
             position: relative;
-            left: 5%;
-            right: 10%;
-            width: 85%;
-            height: auto;
-            margin-top: 20px;
-            padding: 20px;
-            text-align:left;
+            border-radius: var(--border-radius);
+            padding: 4px;
+        }
 
-            background-color: #FDB750;
-            border-style: solid;
-            border-radius: 30px;
-            border-color: #FD7F20;
-            border-width: 5px;
-            opacity: 75%;
+        .container .inner {
+            border-radius: 4px;
+        }
+
+        .container::before,
+        .container::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background: linear-gradient(
+                45deg,
+                #ff595e,
+                #ffca3a,
+                #8ac926,
+                #1982c4,
+                #6a4c93,
+                #ff6700
+            );
+            background-size: 400%;
+            z-index: -1;
+            animation: glow 20s linear infinite;
+            width: 100%;
+            border-radius: var(--border-radius);
+        }
+
+        .example-3::after {
+            filter: blur(25px);
+            transform: translate3d(0, 0, 0); /* For Safari */
+        }
+
+        @keyframes glow {
+            0% {
+                background-position: 0 0;
+            }
+
+            50% {
+                background-position: 100% 0;
+            }
+
+            100% {
+                background-position: 0 0;
+            }
         }
 
         .container_header{
             font-size: 50px;
             font-weight: bold;
-            color:rgb(30, 17, 17);
+            color:white;
         }
 
         .container_additional{
             font-size: 30px;
-            color: #002e2c;
+            color: white;
             margin-bottom: 10px;
             margin-top: 10px;
         }
 
         .body_font_color{
-            color: black;
+            color: white;
         }
 
         .body_font_size{
@@ -120,7 +232,7 @@
 
         li{
             font-size: 20px;
-            color: black;
+            color: white;
             font-family: "Eras ITC", "Eras Light ITC",  sans-serif ;
         }
 
@@ -132,7 +244,7 @@
             position: relative;
             left: 10px;
             font-size: 5rem;
-            color: #FC2E20;
+            color: black;
         }
 
         p{
@@ -145,125 +257,143 @@
             position: relative;
             left: 10px;
             font-size: 5rem;
-            color: #FD7F20;
+            color: black;
         }
     </style>
 </head>
 
 <body class="main">
+    <div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+     </div>
     <div class="heading">
         <p class="header_text">Jaques Janse van Rensburg</p>
         <p id="mantag">IT Manager</p>
     </div>
 
-    <div class="introduction container">
-        <p class="body_font_size body_font_color">Dynamic IT Manager with 6+ years at Hydra-Arc, BSc in IT & Computer Science ’24. Expert in solutions Architecture, C#/C++, Leadership, Project Management & Linux Administration. Avid on leveraging my skills in SQL, Virtualization, Firewall/VPN’S & MySQL to drive innovation. Eager to contribute to you team’s success through robust system integration, strategic decision making and effective problem solving.</p>
+    <div class="card container">
+        <div class="inner">
+            <p class="body_font_size body_font_color">Dynamic IT Manager with 6+ years at Hydra-Arc, BSc in IT & Computer Science ’24. Expert in solutions Architecture, C#/C++, Leadership, Project Management & Linux Administration. Avid on leveraging my skills in SQL, Virtualization, Firewall/VPN’S & MySQL to drive innovation. Eager to contribute to you team’s success through robust system integration, strategic decision making and effective problem solving.</p>
+        </div>
     </div>
 
-    <div class="container">
-        <p class="container_header">Projects</p>
-        <a href="https://jaques941102.github.io/StoreGuard" class="project-tag"><p>StoreGuard Information System<br>C# with Visual Studio<br>Confidential</p></a>
-        <br>
-        <a href="https://jaques941102.github.io/Accomodation" class="project-tag"><p>Ark-Lodge Accomodation<br>C# with Visual Studio<br>Confidential</p></a>
-        <br>
-        <a href="https://www.hydra-arc.com" class="project-tag"><p>Hydra-Arc Webpage<br>HTLM | CSS | JavaScript with Visual Studio Code<br>Public</p></a>
-        <br>
-        <a href="https://www.seritonex.com" class="project-tag"><p>Seritonex Webpage<br>HTLM | CSS | JavaScript with Visual Studio Code<br>Public</p></a>
+    <div class="card container">
+        <div class="inner">
+            <p class="container_header">Projects</p>
+            <a href="https://jaques941102.github.io/StoreGuard" class="project-tag"><p>StoreGuard Information System<br>C# with Visual Studio<br>Confidential</p></a>
+            <br>
+            <a href="https://jaques941102.github.io/Accomodation" class="project-tag"><p>Ark-Lodge Accomodation<br>C# with Visual Studio<br>Confidential</p></a>
+            <br>
+            <a href="https://www.hydra-arc.com" class="project-tag"><p>Hydra-Arc Webpage<br>HTLM | CSS | JavaScript with Visual Studio Code<br>Public</p></a>
+            <br>
+            <a href="https://www.seritonex.com" class="project-tag"><p>Seritonex Webpage<br>HTLM | CSS | JavaScript with Visual Studio Code<br>Public</p></a>
+        </div>
     </div>
 
-    <div class="container">
-        <p class="container_header">Work Experience</p>
-        <p class="container_additional">IT Manager, Hydra-Arc, Secunda - July 2022 onwards</p>
-        <ul>
-            <li>Achieved a 98% customer satisfaction rate through the provision of round-the-clock IT support services</li>
-            <li>Implemented a robust private cloud infrastructure utilizing ESXi VMWare, enhancing system reliability</li>
-            <li>Fortified network security by integrating cutting-edge technologies to safeguard against cyber threats</li>
-            <li>Expertly installed and maintained local, wireless, and WAN networks to ensure optimal connectivity</li>
-            <li>Provided comprehensive managed IT services, including meticulous invoicing and cost-efficiency evaluations</li>
-        </ul>
+    <div class="card container">
+        <div class="inner">
+            <p class="container_header">Work Experience</p>
+            <p class="container_additional">IT Manager, Hydra-Arc, Secunda - July 2022 onwards</p>
+            <ul>
+                <li>Achieved a 98% customer satisfaction rate through the provision of round-the-clock IT support services</li>
+                <li>Implemented a robust private cloud infrastructure utilizing ESXi VMWare, enhancing system reliability</li>
+                <li>Fortified network security by integrating cutting-edge technologies to safeguard against cyber threats</li>
+                <li>Expertly installed and maintained local, wireless, and WAN networks to ensure optimal connectivity</li>
+                <li>Provided comprehensive managed IT services, including meticulous invoicing and cost-efficiency evaluations</li>
+            </ul>
 
-        <p class="container_additional">Reference:</p>
-        <ul>
-            <li>Name:   Sanet Nobrega</li>
-            <li>Cell:    +27 (0) 82 828 3436</li>
-            <li>Email:  sanet.nobrega@hydra-arc.com</li>
-        </ul>
-        <br>
-        <p class="container_additional">Software Engineer | DBD | DBA, Hydra-Arc, Secunda - June 2021 onwards</p>
-        <ul>
-            <li>Designed, developed and successfully deployed a simple yet effective application to facilitate the encryption and distribution of employee payslips</li>
-            <li>Developed a custom Transaction Processing and Management Information System with CRM capabilities to optimize business processes which incorporates biometric security to identify personnel, currently deployed at over 14 locations inside Sasol Secunda for Hydra-Arc where the TPS offers a best in class synchronization algorithm that ensures every endpoint can continue working even if communication is interrupted</li>
-        </ul>
-        <p class="container_additional">Reference:</p>
-        <ul>
-            <li>Name:   Lee Jordaan</li>
-            <li>Tel:    +27 (0) 17 620 4321</li>
-            <li>Email:  lee.jordaan@seritonex.com</li>
-        </ul>
-        <br>
-        <p class="container_additional">IT Technician, Hydra-Arc, Secunda - May 2018 till June 2022</p>
-        <ul>
-            <li>Facilitated the migration from web hosted emails to Microsoft Business 365 with Active Directory Domain Controller</li>
-            <li>Maintained endpoints with a high regard for customer satisfaction and turnaround time</li>
-            <li>Upgraded and maintained network infrastructure spanning across multiple sites encompassing LAN, PTP Wireless, PTMP Wireless, and Site-to-Site SSL Tunnels</li>
-        </ul>
-        <p class="container_additional">Reference:</p>
-        <ul>
-            <li>Name:   Gert Labuschagne</li>
-            <li>Cell:    +27 (0) 72 595 1708</li>
-            <li>Email:  support@hydra-arc.com</li>
-        </ul>
+            <p class="container_additional">Reference:</p>
+            <ul>
+                <li>Name:   Sanet Nobrega</li>
+                <li>Cell:    +27 (0) 82 828 3436</li>
+                <li>Email:  sanet.nobrega@hydra-arc.com</li>
+            </ul>
+            <br>
+            <p class="container_additional">Software Engineer | DBD | DBA, Hydra-Arc, Secunda - June 2021 onwards</p>
+            <ul>
+                <li>Designed, developed and successfully deployed a simple yet effective application to facilitate the encryption and distribution of employee payslips</li>
+                <li>Developed a custom Transaction Processing and Management Information System with CRM capabilities to optimize business processes which incorporates biometric security to identify personnel, currently deployed at over 14 locations inside Sasol Secunda for Hydra-Arc where the TPS offers a best in class synchronization algorithm that ensures every endpoint can continue working even if communication is interrupted</li>
+            </ul>
+            <p class="container_additional">Reference:</p>
+            <ul>
+                <li>Name:   Lee Jordaan</li>
+                <li>Tel:    +27 (0) 17 620 4321</li>
+                <li>Email:  lee.jordaan@seritonex.com</li>
+            </ul>
+            <br>
+            <p class="container_additional">IT Technician, Hydra-Arc, Secunda - May 2018 till June 2022</p>
+            <ul>
+                <li>Facilitated the migration from web hosted emails to Microsoft Business 365 with Active Directory Domain Controller</li>
+                <li>Maintained endpoints with a high regard for customer satisfaction and turnaround time</li>
+                <li>Upgraded and maintained network infrastructure spanning across multiple sites encompassing LAN, PTP Wireless, PTMP Wireless, and Site-to-Site SSL Tunnels</li>
+            </ul>
+            <p class="container_additional">Reference:</p>
+            <ul>
+                <li>Name:   Gert Labuschagne</li>
+                <li>Cell:    +27 (0) 72 595 1708</li>
+                <li>Email:  support@hydra-arc.com</li>
+            </ul>
+        </div>
     </div>
 
-    <div class="container">
-        <p class="container_header">Education</p>
-        <p class="container_additional">BSc Information Technology & Computer Science, North-West University, Potchefstroom - 2024</p>
-        <ul>
-            <li>Object-Oriented Programming, Data Structures, and Algorithms.</li>
-            <li>Designed, developed, and deployed a custom asset management system to streamline operations</li>
-            <li>Implemented a robust private cloud infrastructure utilizing ESXi VMWare, enhancing system reliability</li>
-            <li>Fortified network security by integrating cutting-edge technologies to safeguard against cyber threats</li>
-            <li>Expertly installed and maintained local, wireless, and WAN networks to ensure optimal connectivity</li>
-            <li>Provided comprehensive managed IT services, including meticulous invoicing and cost-efficiency evaluations</li>
-        </ul>
-        <br>
-        <p class="container_additional">National Senior Certificate, Hoërskool Hoogenhout, Bethal - 2012</p>
-        <ul>
-            <li>Mathematics</li>
-            <li>Information Technology</li>
-            <li>Science and Chemistry</li>
-            <li>Geography</li>
-            <li>Afrikaans</li>
-            <li>English</li>
-            <li>Life Oriëntation</li>
-        </ul>
-    </div>
-    <div class="container">
-        <p class="container_header">Skills</p>
-        <ul>
-            <li>Software Engineering</li>
-            <li>Solutions Architecture</li>
-            <li>C# (Programming Language)</li>
-            <li>C++ (Programming Language)</li>
-            <li>MySQL Database Administration & Database Development</li>
-            <li>Project Management</li>
-            <li>Leadership</li>
-            <li>Network Configuration</li>
-            <li>Systems Integration</li>
-            <li>Linux Administration</li>
-            <li>Virtualization Technologies</li>
-            <li>Firewalls Configuration and VPNs</li>
-            <li>Problem Solving</li>
-        </ul>
+    <div class="card container">
+        <div class="inner">
+            <p class="container_header">Education</p>
+            <p class="container_additional">BSc Information Technology & Computer Science, North-West University, Potchefstroom - 2024</p>
+            <ul>
+                <li>Object-Oriented Programming, Data Structures, and Algorithms.</li>
+                <li>Designed, developed, and deployed a custom asset management system to streamline operations</li>
+                <li>Implemented a robust private cloud infrastructure utilizing ESXi VMWare, enhancing system reliability</li>
+                <li>Fortified network security by integrating cutting-edge technologies to safeguard against cyber threats</li>
+                <li>Expertly installed and maintained local, wireless, and WAN networks to ensure optimal connectivity</li>
+                <li>Provided comprehensive managed IT services, including meticulous invoicing and cost-efficiency evaluations</li>
+            </ul>
+            <br>
+            <p class="container_additional">National Senior Certificate, Hoërskool Hoogenhout, Bethal - 2012</p>
+            <ul>
+                <li>Mathematics</li>
+                <li>Information Technology</li>
+                <li>Science and Chemistry</li>
+                <li>Geography</li>
+                <li>Afrikaans</li>
+                <li>English</li>
+                <li>Life Oriëntation</li>
+            </ul>
+        </div>
     </div>
 
-    <div class="container">
-        <p class="container_header">Personal Information</p>
-        <p class="container_additional">License</p>
-        <p class="body_font_size body_font_color">Code B Drivers License | MEWP Operator</p>
-        <p class="container_additional">Contact Information</p>
-        <p class="body_font_size body_font_color">Cell: +27 (0) 078 377 9690</p>
-        <p class="body_font_size body_font_color">Email: jaques.jvr94@gmail.com</p>
-        <p class="body_font_size body_font_color">Address: 22 Duiker Street, Secunda, 2302, South Africa</p>
+    <div class="card container">
+        <div class="inner">
+            <p class="container_header">Skills</p>
+            <ul>
+                <li>Software Engineering</li>
+                <li>Solutions Architecture</li>
+                <li>C# (Programming Language)</li>
+                <li>C++ (Programming Language)</li>
+                <li>MySQL Database Administration & Database Development</li>
+                <li>Project Management</li>
+                <li>Leadership</li>
+                <li>Network Configuration</li>
+                <li>Systems Integration</li>
+                <li>Linux Administration</li>
+                <li>Virtualization Technologies</li>
+                <li>Firewalls Configuration and VPNs</li>
+                <li>Problem Solving</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="card container">
+        <div class="inner">
+            <p class="container_header">Personal Information</p>
+            <p class="container_additional">License</p>
+            <p class="body_font_size body_font_color">Code B Drivers License | MEWP Operator</p>
+            <p class="container_additional">Contact Information</p>
+            <p class="body_font_size body_font_color">Cell: +27 (0) 078 377 9690</p>
+            <p class="body_font_size body_font_color">Email: jaques.jvr94@gmail.com</p>
+            <p class="body_font_size body_font_color">Address: 22 Duiker Street, Secunda, 2302, South Africa</p>
+        </div>
     </div>
 </body>
